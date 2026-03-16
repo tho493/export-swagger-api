@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Export Swagger to Excel</title>
+  <style>
+    body {
+      width: 320px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background: #f7f9fa;
+      color: #333;
+    }
+    h2 {
+      margin-top: 0;
+      color: #4CAF50;
+      font-size: 20px;
+    }
+    p {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, transform 0.1s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    #status {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #666;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Export API to Excel</h2>
+  <p>Mở trang Swagger UI và nhấn nút bên dưới để tải file Excel.</p>
+  
+  <div class="input-group">
+    <input type="text" id="fileNameInput" placeholder="Nhập tên file (mặc định lấy theo Title)" />
+  </div>
+  
+  <button id="exportBtn">⬇Export to Excel</button>
+  <div id="status">Đang xử lý...</div>
+  
+  <!-- Thư viện SheetJS để tạo file Excel -->
+  <script src="xlsx.full.min.js"></script>
+  <!-- Logic của popup -->
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Export Swagger API to Excel",
+  "version": "1.0",
+  "description": "Xuất danh sách API từ Swagger UI ra file Excel.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "http://*/api/swagger",
+    "https://*/api/swagger"
+  ]
+}
